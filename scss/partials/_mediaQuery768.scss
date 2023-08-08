@@ -1,0 +1,197 @@
+@use './vars';
+
+@media screen and (min-width: 768px) {
+    .index {
+        h2 {
+            font-size: 4rem;
+        }
+    }
+
+    .index__servicios__radio {
+        margin: 3rem;
+    }
+
+        .index__clientes__testimonio {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .institucional {
+        padding: 0;
+        padding-left: 16rem;
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.2fr 1.5fr;
+        grid-template-areas:
+        "grid__padding alianzas"
+        "texto1 alianzas"
+        "texto2 alianzas "
+        "video . "
+        "grid__padding2 grid__padding2"
+        "staff staff"
+        ;
+
+        section {
+            padding: 0 1rem 0 1rem;
+        }
+    }
+
+    .grid__padding {
+        grid-area: grid__padding;
+    }
+
+    .texto1 {
+        grid-area: texto1;
+    }
+
+    .texto2 {
+        grid-area: texto2;
+    }
+
+    .institucional__alianzas {
+        grid-area: alianzas;
+
+        &__container {
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 90%;
+            margin: 0;
+
+            &__card {
+                height: 15rem;
+                width: 15rem;
+            }
+        }
+    }
+
+    .grid__padding2 {
+        grid-area: grid__padding2;
+    }
+
+    .institucional__staff {
+        grid-area: staff;
+
+        h2 {
+            font-size: 4rem;
+        }
+    }
+
+    .institucional__staff__container {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .institucional__video {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        grid-area: video;
+    }
+
+    .servicios__texto {
+        padding: 6rem 16rem 2rem 16rem;
+    }
+
+    .accordion-item {
+        padding: 0rem 8rem 0rem 8rem;
+        border: none;
+        border-bottom: solid 2px vars.$color-letra;
+    }
+
+    .accordion-button {
+        text-indent: 4rem;
+    }
+
+    .accordion-button::after {
+        position: absolute;
+        background-image: url(../../assets/img/vectores/accordion__triangle__abrir.png);
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        background-image: url(../../assets/img/vectores/accordion__triangle__cerrar.png);
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+
+        &__formulario {
+            width: 45%;
+            object-fit: cover;
+
+            input, select {
+                width: 80%;
+            }
+
+            #form__cuerpo {
+                width: 80%;
+            }
+        }
+
+        &__direccion {
+            width: 50%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 3fr 1fr;
+            grid-template-areas:
+            "titulo"
+            "redes"
+            "mapa"
+            "telefono"
+            ;
+
+
+            h2 {
+                display: block;
+                grid-area: titulo;
+            }
+
+            &__telefono {
+                grid-area: telefono;
+            }
+
+            &__redes {
+                grid-area: redes;
+            }
+
+            &__mapa {
+                grid-area: mapa;
+
+            }
+        }
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: 
+        "direccion comunidad"
+        "copyright copyright"
+        ;
+
+
+        &__direccion {
+        flex-direction: row;
+        justify-content: space-around;
+        grid-area: direccion;
+        }
+
+        &__comunidad {
+            grid-area: comunidad;
+        }
+
+        &__copyright {
+            grid-area: copyright;
+            align-self: center;
+        }
+    }
+}

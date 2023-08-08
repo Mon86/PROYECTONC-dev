@@ -1,0 +1,63 @@
+@use './vars';
+
+.servicios__texto {
+    padding: 2rem;
+    text-align: justify;
+    text-indent: 2rem;
+
+        h2 {
+        display: inline-block;
+        text-indent: 0;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid vars.$color-letra;
+        margin-top: 8rem;
+    }
+}
+
+.servicios__acordeon {
+    background-color: vars.$color-principal;
+    padding: 2rem 0 2rem 0;
+}
+
+.accordion-item {
+    background-color: vars.$color-principal;
+}
+
+.accordion-header {
+    background-color: vars.$color-principal;
+
+    button {
+        background-color: vars.$color-principal;
+        font-size: 2rem;
+        width: 90%;
+
+        &:focus {
+            background-color: vars.$color-principal;
+            outline: 0;
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            color: vars.$color-letra;
+        }
+
+        &:active {
+            background-color: vars.$color-principal;
+            color: vars.$color-letra;
+        }
+    }
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: vars.$color-principal;
+    color: vars.$color-letra;
+}
+
+
+.accordion-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    a {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+}
