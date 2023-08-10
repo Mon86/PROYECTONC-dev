@@ -36,7 +36,7 @@ button {
 
 h1 {
   font-family: "Kanit", sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   margin: 0.5rem;
   font-weight: bold;
@@ -55,6 +55,10 @@ h3 {
   font-size: 2rem;
   text-align: center;
   margin: 1rem;
+}
+
+body {
+  overflow: hidden;
 }
 
 .header {
@@ -103,7 +107,7 @@ h3 {
   padding: 5rem;
 }
 .header__banner h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .header__banner p {
   font-size: 3rem;
@@ -300,7 +304,7 @@ h3 {
   border-radius: 1rem;
   padding: 0.5rem;
   font-size: 2rem;
-  width: 60rem;
+  width: 80%;
 }
 
 .institucional {
@@ -685,6 +689,9 @@ h3 {
     grid-area: copyright;
     align-self: center;
   }
+  .header__banner h1 {
+    font-size: 4rem;
+  }
 }
 @media screen and (min-width: 992px) {
   .navbar__logo {
@@ -704,6 +711,9 @@ h3 {
     width: 14rem;
     height: 10rem;
   }
+  .header__banner h1 {
+    font-size: 6rem;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer {
@@ -711,5 +721,8 @@ h3 {
     grid-template-columns: 3fr 2fr 2fr;
     grid-template-rows: 1fr;
     grid-template-areas: "direccion comunidad copyright";
+  }
+  .header__banner h1 {
+    font-size: 8rem;
   }
 }/*# sourceMappingURL=styles.css.map */
